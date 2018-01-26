@@ -8,8 +8,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :p:37:p, par l {par l {seq t {space :0:0:x, comp label1:::p::p, space :p:105:p}, seq {par l {comp label2:::p::p, comp label3:::p::p}, space :::x}}, seq l {comp labelVerifyCode:::p:129:p, space :p:39:p}}, par l {seq t {space ::42:p, comp buttonLogin:::p::p, space :p:94:p}, seq {par l {comp textFieldAccount:::p:134:p, comp textFieldPassword:::p:134:p, comp textFieldVerifyCode:::p:134:p}, space :p:59:p}}}}"
-			"$verticalGroup": "par l {seq l {space :p:59:p, par l {seq l {comp label1:::p::p, space :::p, comp label2:::p::p, space :::p, comp labelVerifyCode:::p:30:p}, seq l {comp textFieldAccount:::p::p, space :::p, comp textFieldPassword:::p::p, par l {seq {space :::p, comp label3:::p::p}, seq {space :p:30:p, comp textFieldVerifyCode:::p::p}}}}, space :::p, comp buttonLogin:::p::p, space ::42:x}}"
+			"$horizontalGroup": "par l {seq {par l {seq l {space :p:37:p, par l {comp label2:::p::p, comp label3:::p::p, comp labelVerifyCode::l:p:129:p, comp label1:::p::p}, space :p:3:p, par l {seq l {par l {comp textFieldAccount::l:p:134:p, comp textFieldPassword::l:p:134:p}, space :p:63:p, par l {comp label4::l:p::p, comp label5::l:p::p}, space :p:41:p}, seq l {comp textFieldVerifyCode:::p:134:p, space :::x, comp label6:::p::p, space :p:50:p}}, par l:::p {comp textFieldAccountG:::p:153:p, comp textFieldPasswordE:::p:153:p, comp textFieldAccountE:::p:153:p}}, seq l {space :p:116:p, comp buttonLogin:::p::p}}, space ::57:x}}"
+			"$verticalGroup": "par l {seq l {par l {seq {space :p:135:p, comp label3:::p::p}, seq l {space :p:47:p, par l {seq {par l {seq {comp textFieldAccount:::p::p, space :::p, comp textFieldPassword:::p::p}, seq {par l {comp label4:::p::p, comp textFieldAccountE:::p::p}, space :::p, par l {comp label5:::p::p, comp textFieldPasswordE:::p::p}}}, par l {seq {space :p:30:p, comp textFieldVerifyCode:::p::p}, seq l {space s:::p, par l {comp label6:::p::p, comp textFieldAccountG:::p::p}}}}, seq {comp label1:::p::p, space s:::p, comp label2:::p::p, space :::p, comp labelVerifyCode:::p:30:p}}}}, space s:::p, comp buttonLogin:::p::p, space ::117:x}}"
 		} ) {
 			name: "this"
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -45,9 +45,33 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textFieldVerifyCode"
 			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldAccountE"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": new FormMessage( null, "MainPanel.label4.text" )
+				"labelFor": new FormReference( "textFieldAccountE" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": new FormMessage( null, "MainPanel.label5.text" )
+				"labelFor": new FormReference( "textFieldPasswordE" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldPasswordE"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": new FormMessage( null, "MainPanel.label6.text" )
+				"labelFor": new FormReference( "textFieldAccountG" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldAccountG"
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 25, 125 )
-			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 80, 70 )
+			"size": new java.awt.Dimension( 700, 375 )
 		} )
 	}
 }

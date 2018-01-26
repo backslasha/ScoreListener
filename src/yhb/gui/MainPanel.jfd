@@ -1,0 +1,53 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "yhb.gui"
+	"i18n.bundleName": "values"
+	"i18n.keyPrefix": "MainPanel"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:37:p, par l {par l {seq t {space :0:0:x, comp label1:::p::p, space :p:105:p}, seq {par l {comp label2:::p::p, comp label3:::p::p}, space :::x}}, seq l {comp labelVerifyCode:::p:129:p, space :p:39:p}}, par l {seq t {space ::42:p, comp buttonLogin:::p::p, space :p:94:p}, seq {par l {comp textFieldAccount:::p:134:p, comp textFieldPassword:::p:134:p, comp textFieldVerifyCode:::p:134:p}, space :p:59:p}}}}"
+			"$verticalGroup": "par l {seq l {space :p:59:p, par l {seq l {comp label1:::p::p, space :::p, comp label2:::p::p, space :::p, comp labelVerifyCode:::p:30:p}, seq l {comp textFieldAccount:::p::p, space :::p, comp textFieldPassword:::p::p, par l {seq {space :::p, comp label3:::p::p}, seq {space :p:30:p, comp textFieldVerifyCode:::p::p}}}}, space :::p, comp buttonLogin:::p::p, space ::42:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "MainPanel.label1.text" )
+				"labelFor": new FormReference( "textFieldAccount" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldAccount"
+				"text": new FormMessage( null, "MainPanel.textFieldAccount.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": new FormMessage( null, "MainPanel.label2.text" )
+				"labelFor": new FormReference( "textFieldPassword" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldPassword"
+				"text": new FormMessage( null, "MainPanel.textFieldPassword.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": new FormMessage( null, "MainPanel.label3.text" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "labelVerifyCode"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "buttonLogin"
+				"text": new FormMessage( null, "MainPanel.buttonLogin.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonLoginActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textFieldVerifyCode"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 25, 125 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
